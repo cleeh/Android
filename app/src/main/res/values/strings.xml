@@ -3,4 +3,5 @@
 
     <string name="edit_message">Put a message</string>
     <string name="button_send">TRANSMIT</string>
+    <string name="item_edit_text">ListVIew Item</string>
 </resources>

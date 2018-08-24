@@ -38,4 +38,9 @@ public class MainActivity extends AppCompatActivity {
         // Start Activity
         startActivity(intent);
     }
+
+    public void processEvent(View view) {
+        Intent intent = new Intent(this, EventProcessing.class);
+        startActivity(intent);
+    }
 }
