@@ -17,7 +17,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".DisplayMessageActivity" />
-        <activity android:name=".EventProcessing"></activity>
+        <activity android:name=".EventProcessing" />
+        <activity android:name=".Activity1" />
+        <activity android:name=".IntentActivity" />
+        <activity android:name=".Activity2" />
+        <activity android:name=".ShowMessageActivity" />
+        <activity android:name=".BloodTypeChoiceActivity"></activity>
     </application>
 
 </manifest>

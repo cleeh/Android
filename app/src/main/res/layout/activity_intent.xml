@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IntentActivity"
+    android:orientation="vertical">
+
+    <TextView android:text="Execute Activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    ​
+    <Button
+        android:id="@+id/btn_start_activity_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Activity 1"/>
+    <Button
+        android:id="@+id/btn_start_activity_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Activity 2"/>
+
+    <Button
+        android:id="@+id/btn_dial_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="010-1234-5678"/>
+
+    <EditText
+        android:id="@+id/message_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Message Input"/>
+
+    <Button
+        android:id="@+id/btn_choose_blood_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Blood Type Selection"/>
+    <TextView
+        android:id="@+id/blood_type_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
