@@ -36,4 +36,10 @@
         android:onClick="intentActivity"/>
     <!--android:onClick="showMessage"-->
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SharedPreference"
+        android:onClick="sharedPreferenceActivity"/>
+
 </LinearLayout>

@@ -48,4 +48,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Intent.class);
         startActivity(intent);
     }
+
+    public void sharedPreferenceActivity(View veiw){
+        Intent intent = new Intent(this, Intent.class);
+        startActivity(intent);
+    }
 }

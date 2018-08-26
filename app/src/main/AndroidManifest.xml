@@ -22,7 +22,9 @@
         <activity android:name=".IntentActivity" />
         <activity android:name=".Activity2" />
         <activity android:name=".ShowMessageActivity" />
-        <activity android:name=".BloodTypeChoiceActivity"></activity>
+        <activity android:name=".BloodTypeChoiceActivity" />
+        <activity android:name=".SharedPreference" />
+        <activity android:name=".ProfileActivity"></activity>
     </application>
 
 </manifest>
