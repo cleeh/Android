@@ -49,8 +49,13 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void sharedPreferenceActivity(View veiw){
+    public void sharedPreferenceActivity(View view){
         Intent intent = new Intent(this, Intent.class);
+        startActivity(intent);
+    }
+
+    public void internetIO(View view){
+        Intent intent = new Intent(this, InternetIO.class);
         startActivity(intent);
     }
 }

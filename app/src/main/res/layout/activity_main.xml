@@ -42,4 +42,10 @@
         android:text="SharedPreference"
         android:onClick="sharedPreferenceActivity"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="InternetIO"
+        android:onClick="internetIO"/>
+
 </LinearLayout>

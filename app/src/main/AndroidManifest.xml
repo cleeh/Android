@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.rockatoo.helloapplication">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -25,7 +28,8 @@
         <activity android:name=".BloodTypeChoiceActivity" />
         <activity android:name=".SharedPreference" />
         <activity android:name=".ProfileActivity" />
-        <activity android:name=".LicenseActivity"></activity>
+        <activity android:name=".LicenseActivity" />
+        <activity android:name=".InternetIO"></activity>
     </application>
 
 </manifest>
