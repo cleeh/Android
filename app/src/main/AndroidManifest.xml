@@ -24,7 +24,8 @@
         <activity android:name=".ShowMessageActivity" />
         <activity android:name=".BloodTypeChoiceActivity" />
         <activity android:name=".SharedPreference" />
-        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".LicenseActivity"></activity>
     </application>
 
 </manifest>
