@@ -12,6 +12,13 @@
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:text="Profile Edit"/>
+    
+    <Button
+        android:id="@+id/btn_show_contacts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contacts List"/>
+    
     <TextView
         android:id="@+id/name_text_view"
         android:layout_width="wrap_content"

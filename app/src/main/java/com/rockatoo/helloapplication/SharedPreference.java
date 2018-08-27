@@ -22,7 +22,7 @@ import java.io.IOException;
 import java.security.Key;
 
 public class SharedPreference extends AppCompatActivity {
-    Button editProfileBtn, btnShowLicense;
+    Button editProfileBtn, btnShowLicense, btnShowContacts;
     TextView nameTextView, emailTextView;
     EditText memoEditText;
 
@@ -42,6 +42,15 @@ public class SharedPreference extends AppCompatActivity {
         emailTextView = (TextView)findViewById(R.id.email_text_view);
         memoEditText = (EditText)findViewById(R.id.memo_edit_text);
         btnShowLicense = (Button)findViewById(R.id.btn_show_license);
+        btnShowContacts = (Button)findViewById(R.id.btn_show_contacts);
+
+        btnShowContacts.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SharedPreference.this, FriendsActivity.class);
+                startActivity(intent);
+            }
+        });
 
         // Event Setting
         editProfileBtn.setOnClickListener(new View.OnClickListener(){
