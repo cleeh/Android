@@ -1,6 +1,7 @@
 package com.rockatoo.helloapplication;
 
 import android.app.Activity;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -27,10 +28,14 @@ public class SharedPreference extends AppCompatActivity {
 
     static final String MEMO_FILE = "memo";
 
+    ProfileDbHelper mDbHelper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shared_preference);
+
+        mDbHelper = new ProfileDbHelper(this);
 
         editProfileBtn = (Button)findViewById(R.id.btn_edit_profile);
         nameTextView = (TextView)findViewById(R.id.name_text_view);
@@ -83,6 +88,9 @@ public class SharedPreference extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
+        // Read Profile Info
+        getProfile();
+
         // If there is stored name, Set it
         SharedPreferences sharedPreferences = getSharedPreferences(ProfileActivity.PREF_PROFILE, Activity.MODE_PRIVATE);
         // If there is not stored name, Set default value "Someone"
@@ -125,5 +133,21 @@ public class SharedPreference extends AppCompatActivity {
         }
 
         return text;
+    }
+
+    private void getProfile(){
+        // Check Profile Id in SharedPreferences
+        SharedPreferences sp = getSharedPreferences(ProfileActivity.PREF_PROFILE, Activity.MODE_PRIVATE);
+        long profileId = sp.getLong(ProfileActivity.PREF_PROFILE_ID, -1);
+        // Get Info from DB
+        ContentValues values = mDbHelper.getProfile(profileId);
+        if(values == null) return;
+        // Info Allocation
+        String name = values.getAsString(ProfileDbHelper.ProfileContract.ProfileEntry.COLUMN_NAME_NAME);
+        String email = values.getAsString(ProfileDbHelper.ProfileContract.ProfileEntry.COLUMN_NAME_EMAIL);
+        String phone = values.getAsString(ProfileDbHelper.ProfileContract.ProfileEntry.COLUMN_NAME_PHONE);
+        // Set Info in UI
+        nameTextView.setText(name);
+        emailTextView.setText(email);
     }
 }

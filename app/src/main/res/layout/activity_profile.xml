@@ -18,6 +18,18 @@
         android:layout_height="wrap_content"
         android:hint="Fill Name in"/>
 
+    <EditText
+        android:id="@+id/email_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Fill Email in"/>
+
+    <EditText
+        android:id="@+id/phone_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Fill Phone-Number in"/>
+
     <Button
         android:id="@+id/btn_submit"
         android:layout_width="100dp"
