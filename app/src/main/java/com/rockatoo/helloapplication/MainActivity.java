@@ -58,4 +58,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, InternetIO.class);
         startActivity(intent);
     }
+
+    public void serviceActivity(View view){
+        Intent intent = new Intent(this, ServiceActivity.class);
+        startActivity(intent);
+    }
 }
